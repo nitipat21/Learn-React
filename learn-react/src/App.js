@@ -1,16 +1,11 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import CardContainer from "./components/CardContainer";
-import React from "react";
+import Nav from "./components/nav"
+import Main from "./components/main"
 
 export default function App(){
-    return(
-
+    return (
         <div>
-            <Navbar />
-            <Hero />
-            <CardContainer />
+            <Nav />
+            <Main />
         </div>
-
     )
-}
+};
