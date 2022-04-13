@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
-import Main from "./components/Main";
+import Hero from "./components/Hero";
+import CardContainer from "./components/CardContainer";
 import React from "react";
 
 export default function App(){
@@ -7,7 +8,8 @@ export default function App(){
 
         <div>
             <Navbar />
-            <Main />
+            <Hero />
+            <CardContainer />
         </div>
 
     )
