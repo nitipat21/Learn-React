@@ -1,9 +1,11 @@
-import CardContainer from "./card-container"
+import Input from "./input"
+import Output from "./output"
 
 export default function Main() {
     return (
         <main>
-            <CardContainer />
+            <Input />
+            <Output />
         </main>
     )
 }

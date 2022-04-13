@@ -19,58 +19,81 @@ body{
 }
 
 nav{
-  background-color: #F55A5A;
-  color: white;
-  height: 2.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #fff;
+  background-color: #f8ceec;
+  background-image: linear-gradient(0deg, #f8ceec 0%, #a88beb 74%);
+  font-size: 80%;
 }
 
-.nav-container{
+.nav-left{
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
 
-.card{
-  display: flex;
-  gap: 1.5rem;
-  margin: 2rem;
+.logo{
+  width: 31.31px;
+  height: 26.22px;
 }
 
-.card-image{
-  width: 100%;
+.nav-right h3{
+  font-weight: 300;
 }
 
-.card-image img{
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
-}
+/* close nav */
 
-.card-info{
+main{
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 2rem;
 }
 
-.location{
+.input-container{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
+}
+
+.text-input-container{
+  display: flex;
   gap: 0.5rem;
 }
 
-.bx-map{
-  color: #F55A5A;
+#firstInput, #secondInput{
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border-color: #D5D4D8;
+  border-style: solid;
 }
 
-.location a{
-  font-size: 0.75rem;
-  color: #918E9B;
+.sumbit-input-container{
+  width: 100%;
 }
 
-.description-container{
-  font-size: 0.75rem;
+.sumbit-input-container button{
+  width: 100%;
+  padding: 0.65rem;
+  font-size: 0.5rem;
+  background-color: #f8ceec;
+  background-image: linear-gradient(0deg, #f8ceec 0%, #a88beb 74%);
+  color: #fff;
+  border-radius: 0.5rem;
+  border-style: none;
+}
+
+.sumbit-input-container button:hover{
+  color: #000;
+}
+
+.output-container{
+  border-radius: 0.5rem;
+  border: 2px solid #D5D4D8;
+  box-shadow: 0 0 5px black;
 }
