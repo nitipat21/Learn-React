@@ -1,28 +1,35 @@
 import React from 'react';
-import CardImage from '../images/card/card.png'
-import SoldoutImage from '../images/card/soldout.png'
 import StarImage from '../images/card/star.png'
 
-export default function Card() {
+export default function Card(props) {
+
+    let badgeText;
+    if (props.status === 0) {
+        badgeText = "SOLD OUT"
+    } else if (props.location === "Online") {
+        badgeText = "ONLINE"
+    }
+    
+
     return (
 
         <div className="card">
-            <div className="card-status">
-                <img src={SoldoutImage} alt="Soldout-image"/>
-            </div>
-            <div className="card-image">
-                <img src={CardImage} alt="card-image" />
+            {badgeText && <div className="card-status"><h6>{badgeText}</h6></div>}
+            <div className="card">
+                <img src={props.img} alt="card" />
             </div>
             <div className="card-info-container">
                 <div className="card-info-rating">
-                    <img src={StarImage} alt="star-image" />
-                    <h6>5.0 <span>(6)•USA</span></h6>
+                    <img src={StarImage} alt="star" />
+                    <div className="rating"><h6>{props.rating}</h6></div>
+                    <div className="viewCount"><h6>({props.viewCount})</h6></div>
+                    <div className="location"><h6>•{props.location}</h6></div>
                 </div>
                 <div className="card-info-text">
-                    <h6>Life Lessons with Katie Zaferes</h6>
+                    <h6>{props.title}</h6>
                 </div>
                 <div className="card-info-price">
-                    <h6><span>From $136</span> / person</h6>
+                    <h6><span>From ${props.price}</span> / person</h6>
                 </div>
             </div>
         </div>

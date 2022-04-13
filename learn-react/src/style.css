@@ -92,3 +92,38 @@ h6{
 .card-info-price span{
   font-weight: 700;
 }
+
+.cards-container{
+  display: flex;
+  max-width: 100%;
+  overflow-x: scroll;
+  gap: 1rem;
+}
+
+.card{
+  position: relative;
+  flex-shrink: 0;
+  width: 11rem;
+}
+
+.viewCount, .location{
+  color: #918E9B;
+}
+
+.card-info-text{
+  overflow: hidden;
+  text-overflow: hidden;
+  max-height: 3.625rem;
+}
+
+.card-status{
+  z-index: 999;
+  background-color: #d3d3d3;
+  padding: 0.25rem;
+  border-radius: 1rem;
+  
+}
+
+.card-status h6{
+  font-weight: 700;
+}
