@@ -1,10 +1,11 @@
-import Data from '../data';
 import React from 'react';
 
 
 export default function Input() {
 
-    const   [result,setResult] = React.useState(
+    const   [allMemes, setAllMemes] = React.useState([])
+
+        ,   [result,setResult] = React.useState(
             
                 {   "firstInput":"",
                     "secondInput":"",
@@ -17,9 +18,10 @@ export default function Input() {
 
         },  generateMeme = function(){
         
-            const   dataLength = Data.data.memes.length,
+            const   memeArray = allMemes,
+                    dataLength = memeArray.length,
                     randomID = getRandomInt(dataLength),
-                    newMemeUrl = Data.data.memes[randomID].url;
+                    newMemeUrl = memeArray[randomID].url;
 
             return setResult(prevResult => {
                 return  {
@@ -35,7 +37,15 @@ export default function Input() {
                             ...prevResult, [name] : value
                         }
             });
-        } 
+        };
+
+        React.useEffect(() => {
+            fetch("https://api.imgflip.com/get_memes")
+                .then(response => response.json())
+                .then(data => setAllMemes(data.data.memes))
+            },[])
+
+        console.log(allMemes)
     
     return(
 
