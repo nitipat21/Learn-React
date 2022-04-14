@@ -53,6 +53,12 @@ main{
   gap: 2rem;
 }
 
+.memeGenerator-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .input-container{
   display: flex;
   flex-direction: column;
@@ -96,4 +102,21 @@ main{
   border-radius: 0.5rem;
   border: 2px solid #D5D4D8;
   box-shadow: 0 0 5px black;
+}
+
+.top-text{
+  position: absolute;
+  top: 25%;
+}
+
+.bottom-text{
+  position: absolute;
+  bottom: 40%;
+}
+
+.output-image-container{
+  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
 }

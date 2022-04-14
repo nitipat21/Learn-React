@@ -1,11 +1,9 @@
-import Input from "./input"
-import Output from "./output"
+import Input from "./memeGenerator"
 
 export default function Main() {
     return (
         <main>
             <Input />
-            <Output />
         </main>
     )
 }
