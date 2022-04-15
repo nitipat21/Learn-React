@@ -13,110 +13,64 @@ img{
 
 body{
   display: grid;
-  margin: 0 auto;
+  margin: 4rem auto;
   width: 34.375rem;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px #000;
 }
-
-nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  color: #fff;
-  background-color: #f8ceec;
-  background-image: linear-gradient(0deg, #f8ceec 0%, #a88beb 74%);
-  font-size: 80%;
-}
-
-.nav-left{
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.logo{
-  width: 31.31px;
-  height: 26.22px;
-}
-
-.nav-right h3{
-  font-weight: 300;
-}
-
-/* close nav */
 
 main{
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  background-color: #2B283A;
 }
 
-.memeGenerator-container{
+.game-container{
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
-
-.input-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  width: 97.5%;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  padding-top: 2rem;
 }
 
-.text-input-container{
-  display: flex;
-  gap: 0.5rem;
+.game-info{
+  padding: 2rem;
+  text-align: center;
 }
 
-#firstInput, #secondInput{
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  border-color: #D5D4D8;
-  border-style: solid;
+.dices-grid-container{
+  margin: 1rem auto 2.5rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 1.5rem;
+  place-content: center;
 }
 
-.sumbit-input-container{
-  width: 100%;
+.dice{
+  background-color: #FFF;
+  box-shadow: 0 0 5px #000;
+  width: 1.25rem;
+  text-align: center;
+  padding: 1rem 1.5rem;
 }
 
-.sumbit-input-container button{
-  width: 100%;
-  padding: 0.65rem;
-  font-size: 0.5rem;
-  background-color: #f8ceec;
-  background-image: linear-gradient(0deg, #f8ceec 0%, #a88beb 74%);
-  color: #fff;
-  border-radius: 0.5rem;
+.dice.hold{
+  background-color: #59E391;
+  color: #F5F5F5;
+}
+
+.roll-btn button{
+  padding: 1rem 4rem;
+  margin-bottom: 4rem;
+  background-color: #5035ff;
+  color: #FFF;
+  border-radius: 1rem;
   border-style: none;
+  box-shadow: 0 0 5px #000;
 }
 
-.sumbit-input-container button:hover{
-  color: #000;
-}
-
-.output-container{
-  border-radius: 0.5rem;
-  border: 2px solid #D5D4D8;
-  box-shadow: 0 0 5px black;
-}
-
-.top-text{
-  position: absolute;
-  top: 25%;
-}
-
-.bottom-text{
-  position: absolute;
-  bottom: 40%;
-}
-
-.output-image-container{
-  color: red;
-  display: flex;
-  flex-direction: column;
-  align-items: center ;
+.roll-btn button:hover{
+  color: #9685ff;
+  background-color: #2B283A;
+  border-color: #2B283A;
 }
