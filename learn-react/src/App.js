@@ -68,7 +68,7 @@ export default function App(){
             {isWon && <Confetti />}
             <div className="game-container">
                 <div className="game-title">
-                    <h1>Tenzies</h1>
+                    <h1>TENZIES</h1>
                 </div>
                 <div className="game-info">
                     <p>Roll until dice are the same.<br></br>Click each dice to freeze it at its current value between rolls</p>
