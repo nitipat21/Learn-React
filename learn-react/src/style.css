@@ -45,7 +45,7 @@ main{
 }
 
 .dices-grid-container{
-  margin: 1rem auto 2.5rem;
+  margin: 2.5rem 2.5rem;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   gap: 2rem;
@@ -58,6 +58,7 @@ main{
     width: 6.5rem;  
     height: 6.5rem;  
     border-radius: 10%;
+    box-shadow: 0 0 10px #000;
 }
 
 .dice.hold{
@@ -67,7 +68,7 @@ main{
 
 .roll-btn button{
   padding: 1rem 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   background-color: #5035ff;
   color: #FFF;
   border-radius: 1rem;
@@ -209,4 +210,125 @@ main{
 
 .face-6 .dot:nth-of-type(6) {
   grid-area: "six";
+}
+/* close facr-6 */
+
+.track-container{
+  display: flex;
+  justify-content: space-between;
+  width: 77.5%;
+}
+
+.rollCount span{
+  color: #5035ff;
+}
+
+.target-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.messageElement{
+  color: #D0342C;
+  background-color: #000;
+  position: relative;
+  top: 25%;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px #000000;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.timer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.timer-container{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 2rem;
+  font-weight: 700;
+  gap: 0.25rem;
+}
+
+.timer{
+  display: flex;
+  width: 100%;
+  text-align: end;
+}
+
+.timeNumber{
+  display: flex;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  text-align: end;
+  width: 100%;
+}
+
+.timeNumber span{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 3rem;
+  color: #5035ff;
+}
+
+.red{
+  color: red;
+}
+
+.shaking{
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.timeRecord-container{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 4rem 4rem 2rem 4rem;
+}
+
+.previous-time{
+  opacity: 0.5;
+  padding: 1rem;
+  border: 4px solid;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #000;
+}
+
+.best-time{
+  color: #fdd813;
+  background-color: #2B283A;
+  border-color: #fdd813;
+  border: 4px solid;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px #000;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
