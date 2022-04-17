@@ -100,12 +100,14 @@ export default function App(){
             setIsWon(true);
             setIsStart(false);
 
-            if (bestTime === previousTime) {
-                setNewBest(true)
+            if (getBestTime === getPreviousTime) {
+                setNewBest(true);
                 setTimeout(()=> setNewBest(false) ,5000);
+            } else {
+                setNewBest(false);
             }
 
-        } else if ( allIsHold && allIsSameValue ) {
+        } else if ( allIsHold && allIsSameValue && isStart ) {
 
             setIsSame(true);
             setTimeout(()=> setIsSame(false) ,5000);
