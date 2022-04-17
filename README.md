@@ -6,9 +6,9 @@ my main branch is contained the last project (Tensizes game)
 
 I extended more function than the course which are
 - changed number on dice to dot by using css
-- add target number to win the game
-- track roll count
-- timer
-- save time record on localstorage
-- display previouse time
-- display best time
+- added target number to win the game
+- added track roll count
+- added timer
+- added function to save time record on localstorage
+- added function to display previouse time
+- added function to display best time
