@@ -31,13 +31,40 @@ img{
 body{
   display: grid;
   margin: 4rem auto;
-  width: 60rem;
+  max-width: 60rem;
   box-shadow: 0 0 10px var(--black);
+  zoom: 75%;
 }
 
 main{
   padding: 2rem;
   background-color: var(--light-black);
+}
+
+footer{
+  background-color: var(--light-black);
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icons{
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+.icons a svg:hover{
+  transform: scale(1.2);
+}
+
+.page-wrap{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .game-container{
@@ -77,6 +104,11 @@ main{
     height: 6.5rem;  
     border-radius: 10%;
     box-shadow: 0 0 10px var(--white);
+    cursor: pointer;
+}
+
+.dice:hover{
+  transform: scale(1.1);
 }
 
 .dice.hold{
@@ -93,6 +125,7 @@ main{
   border-style: none;
   box-shadow: 0 0 5px var(--black);
   text-shadow: 0 0 5px var(--black);
+  cursor: pointer;
 }
 
 .roll-btn button:hover{
@@ -251,6 +284,11 @@ main{
   margin-bottom: 2rem;
 }
 
+.target-container div,.target-container div:hover{
+  cursor: unset;
+  transform: unset;
+}
+
 .timer{
   display: flex;
   justify-content: space-between;
@@ -338,5 +376,32 @@ main{
 
   40%, 60% {
     transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  body{
+    zoom: 70%;
+  }
+  @media only screen and (max-width: 600px) {
+    body{
+      zoom: 55%;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    body{
+      zoom: 45%;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    body{
+      zoom: 40%;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    body{
+      zoom: 35%;
+    }
   }
 }
